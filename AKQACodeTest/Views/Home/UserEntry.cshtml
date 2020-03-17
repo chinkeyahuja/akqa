@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+@using (Html.BeginForm("UserEntry", "Home", FormMethod.Post)) { 
+@Html.Label("Enter your Name: ", new { style = "valign:top; font-size:15px; font-weight:600" })@Html.TextBox("txtUserName")<br/>
+@Html.Label("Enter any Number: ", new { style = "valign:top; font-size:15px; font-weight:600" })@Html.TextBox("txtNumber")<br/>
+<input type="submit" value="submit" id="submit" />
+}
+
